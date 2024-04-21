@@ -2,10 +2,6 @@ const mongoose = require("mongoose");
 const app = require("./app");
 const { PORT, DB_HOST } = require("./helpers/env");
 
-if (PORT == null || PORT == "") {
-  PORT = 8000;
-}
-
 mongoose
   .connect(DB_HOST)
   .then(() => {
